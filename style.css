@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: hsl(275, 100%, 97%);
+  padding-top: 120px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.accordion {
+  padding: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+summary {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary:hover {
+  color: hsl(292, 16%, 49%);
+}
+
+.content {
+  padding: 10px 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+hr {
+  border-top: 1px solid hsl(275, 100%, 97%);
+}
+
+.icon-img {
+  width: 25px;
+  transition: transform 0.3s ease;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.title img {
+  width: 40px;
+}
+
+.attribution {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+details[open] .content {
+  max-height: 500px; /* Ajuste conforme necessário */
+}
+
+details[open] .ask {
+  color: hsl(292, 42%, 14%);
+}
